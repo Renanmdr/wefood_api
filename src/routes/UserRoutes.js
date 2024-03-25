@@ -7,11 +7,11 @@ import { verifyToken } from '../helpers/verify-token.js'
 // image upload
 import { imageUpload } from '../helpers/image-upload.js'
 
-router.post('/register', UserController.resgister)
-router.post('/login', UserController.login)
-router.get('/checkuser', UserController.checkUser)
-router.get('/:id', UserController.getUserById)
-router.patch('/edit/:id', verifyToken, imageUpload.single('image'), UserController.editUser)
+router.post('/users/register', UserController.resgister)
+router.post('/users/login', UserController.login)
+router.get('/users/checkuser', UserController.checkUser)
+router.get('/users/:id', UserController.getUserById)
+router.patch('/users/edit/:id', verifyToken, imageUpload.single('image'), UserController.editUser)
 
 
 

@@ -19,8 +19,8 @@ app.use(express.json())
 app.use(express.static('public'))
 
 // routes
-app.use('/users', UserRoutes)
-app.use('/foods', FoodRoutes)
+app.use(UserRoutes)
+app.use(FoodRoutes)
 
 app.listen(5000)
 
