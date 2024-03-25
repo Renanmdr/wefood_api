@@ -1,11 +1,11 @@
 import mongoose from "mongoose";
-// const DB_USER = process.env.DB_USER
-// const DB_PASS = process.env.DB_PASS
-const MONGO_URL = process.env.MONGO_URL
+const DB_USER = process.env.DB_USER
+const DB_PASS = process.env.DB_PASS
+//const MONGO_URL = process.env.MONGO_URL
 
 
 async function main(){
-    await mongoose.connect(`${MONGO_URL}`)
+    await mongoose.connect(`mongodb+srv://${DB_USER}:${DB_PASS}@cluster0.mnufb6f.mongodb.net/wefood?retryWrites=true&w=majority&appName=Cluster0`)
     console.log('conectou ao mongoose! ')
 }
 
