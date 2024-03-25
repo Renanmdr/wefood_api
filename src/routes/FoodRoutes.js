@@ -4,7 +4,9 @@ const router = express.Router()
 import { FoodController } from '../controllers/FoodController.js'
 import { verifyToken } from '../helpers/verify-token.js'
 import { imageUpload } from '../helpers/image-upload.js'
-
+router.get('/', (_, res) => {
+  return res.send('Olá DEV!');
+});
 router.post('/create', verifyToken, imageUpload.array('images') ,FoodController.create)
 router.get('/', FoodController.getAll)
 router.get('/myfoods', verifyToken, FoodController.getAllUserFoods)
