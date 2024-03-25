@@ -13,7 +13,7 @@ const app = express()
 app.use(express.json())
 
 // solve cors 
-//app.use(cors({ Credential: true, origin: 'http://localhost:5173'}))
+app.use(cors({ Credential: true, origin: 'http://localhost:5173'}))
 
 // public folder for images 
 app.use(express.static('public'))
