@@ -16,7 +16,8 @@ app.use(express.json())
 app.use(cors({ Credential: true, origin: 'https://endearing-gumption-98c016.netlify.app'}))
 
 // public folder for images 
-app.use(express.static('public'))
+//app.use(express.static('public'))
+app.use('/files', express.static('public/images/foods'))
 
 // routes
 app.use(UserRoutes)
